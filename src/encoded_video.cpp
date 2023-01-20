@@ -102,7 +102,7 @@ int main(int argc, char** argv) {
     dai::Device device(pipeline);
 
     // Output queue will be used to get the encoded data from the output defined above
-    auto video = device.getOutputQueue("h264", 30, false);
+    auto video = device.getOutputQueue("h264", 15, false);
 
     auto callback = [&](std::shared_ptr<dai::ADatatype> data){
         // auto videoIn = video->get<dai::ImgFrame>();
